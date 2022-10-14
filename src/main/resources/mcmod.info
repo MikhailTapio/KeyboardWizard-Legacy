@@ -2,7 +2,7 @@
   {
     "modid": "keywizard",
     "name": "Keyboard Wizard",
-    "description": "Keyboard Wizard for legacy",
+    "description": "Keyboard Wizard for legacy versions",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
