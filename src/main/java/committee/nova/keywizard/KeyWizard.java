@@ -15,7 +15,7 @@ import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = KeyWizard.MODID, useMetadata = true)
+@Mod(modid = KeyWizard.MODID, useMetadata = true, dependencies = "required-after:mkb@[2.0.0,)")
 public class KeyWizard {
 
     public static final String MODID = "keywizard";
