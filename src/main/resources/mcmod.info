@@ -1,14 +1,15 @@
 [
   {
-    "modid": "examplemod",
-    "name": "ExampleMod",
-    "description": "Example mixined scala mod!",
+    "modid": "keywizard",
+    "name": "Keyboard Wizard",
+    "description": "Keyboard Wizard for legacy",
     "version": "${version}",
     "mcversion": "${mcversion}",
     "url": "",
     "updateUrl": "",
     "authorList": [
-      "Author"
+      "MrNerdy42",
+      "Tapio"
     ],
     "credits": "",
     "logoFile": "",
