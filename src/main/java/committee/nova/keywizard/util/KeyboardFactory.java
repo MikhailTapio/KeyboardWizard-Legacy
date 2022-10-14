@@ -21,7 +21,7 @@ public class KeyboardFactory {
 
     private static GuiKeyboard makeQwertyKeyboard(GuiKeyWizard parent, double x, double y, double width, double height) {
         GuiKeyboard kb = new GuiKeyboard(parent, x, y);
-        double currentX = 0;
+        double currentX;
         double currentY = 0;
 
         double keySpacing = 5;
@@ -67,7 +67,7 @@ public class KeyboardFactory {
 
     private static GuiKeyboard makeNumpad(GuiKeyWizard parent, double x, double y, double width, double height) {
         GuiKeyboard kb = new GuiKeyboard(parent, x, y);
-        double currentX = 0;
+        double currentX;
         double currentY = 0;
 
         double keySpacing = 5;
@@ -118,14 +118,6 @@ public class KeyboardFactory {
     /**
      * Adds a uniformly spaced row to the keyboard it is passed.
      *
-     * @param kb
-     * @param startCode
-     * @param endCode
-     * @param startX
-     * @param y
-     * @param width
-     * @param height
-     * @param spacing
      * @return x position of left edge of the last key added
      */
     private static double addHorizontalRow(GuiKeyboard kb, int startCode, int endCode, double startX, double y, double width, double height, double spacing) {

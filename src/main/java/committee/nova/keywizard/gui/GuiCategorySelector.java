@@ -18,13 +18,11 @@ import java.util.ArrayList;
  * hacked together using the vanilla GuiButton class
  */
 public class GuiCategorySelector extends GuiButton {
-
-
-    private GuiKeyWizard parent;
+    private final GuiKeyWizard parent;
 
     private boolean extended = false;
-    private GuiCategoryList list;
-    private ArrayList<String> categories;
+    private final GuiCategoryList list;
+    private final ArrayList<String> categories;
 
     private int selectedCategoryIdx;
     private String selectedCategory;

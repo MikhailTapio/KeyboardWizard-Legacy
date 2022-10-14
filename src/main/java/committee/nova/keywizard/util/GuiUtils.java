@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GuiUtils {
-    private static ItemStack cachedTooltipStack = new ItemStack(Blocks.air);
+    private static final ItemStack cachedTooltipStack = new ItemStack(Blocks.air);
 
     public static void drawGradientRect(int par1, int par2, int par3, int par4, int par5, int par6) {
         float f = (float) (par5 >> 24 & 255) / 255.0F;
@@ -141,7 +141,7 @@ public class GuiUtils {
 
             if (needsWrap) {
                 int wrappedTooltipWidth = 0;
-                List<String> wrappedTextLines = new ArrayList<String>();
+                List<String> wrappedTextLines = new ArrayList<>();
                 for (int i = 0; i < textLines.size(); i++) {
                     String textLine = textLines.get(i);
                     List<String> wrappedLine = font.listFormattedStringToWidth(textLine, tooltipTextWidth);

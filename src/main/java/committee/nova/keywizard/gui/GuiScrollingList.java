@@ -200,7 +200,7 @@ public abstract class GuiScrollingList {
                     int mouseListY = mouseY - this.top - this.headerHeight + (int) this.scrollDistance - border;
                     int slotIndex = mouseListY / this.slotHeight;
 
-                    if (mouseX >= entryLeft && mouseX <= entryRight && slotIndex >= 0 && mouseListY >= 0 && slotIndex < listLength) {
+                    if (mouseX <= entryRight && slotIndex >= 0 && mouseListY >= 0 && slotIndex < listLength) {
                         this.elementClicked(slotIndex, slotIndex == this.selectedIndex && System.currentTimeMillis() - this.lastClickTime < 250L);
                         this.selectedIndex = slotIndex;
                         this.lastClickTime = System.currentTimeMillis();

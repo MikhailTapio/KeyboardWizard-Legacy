@@ -1,5 +1,6 @@
 package committee.nova.keywizard;
 
+import committee.nova.keywizard.config.KeyWizardConfig;
 import committee.nova.keywizard.handlers.ClientFMLEventHandler;
 import committee.nova.keywizard.handlers.ClientForgeEventHandler;
 import committee.nova.keywizard.key.KeyInit;
@@ -22,7 +23,7 @@ public class KeyWizard {
 
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
-    private static String[] conflictingMods = {"controlling"};
+    private static final String[] conflictingMods = {"controlling"};
 
     @Mod.Instance
     public static KeyWizard instance;

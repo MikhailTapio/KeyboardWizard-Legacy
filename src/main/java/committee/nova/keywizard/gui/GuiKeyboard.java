@@ -53,7 +53,7 @@ public class GuiKeyboard extends FloatGui {
     }
 
     public void addKey(double xIn, double yIn, double width, double height, int keyCode) {
-        this.keyList.put(new Integer(keyCode), new GuiKeyboardKey(this, xIn, yIn, width, height, keyCode));
+        this.keyList.put(keyCode, new GuiKeyboardKey(this, xIn, yIn, width, height, keyCode));
     }
 
     public void disableKey(int keyCode) {
@@ -134,7 +134,7 @@ public class GuiKeyboard extends FloatGui {
             this.hovered = mouseX >= this.absX() && mouseY >= this.absY() && mouseX < this.absX() + this.width && mouseY < this.absY() + this.height;
             int modifiedBindings = KeybindUtils.getNumBindings(this.keyCode, parent.getActiveModifier());
             //int unmodifiedBindings = KeybindUtils.getNumBindings(this.keyCode, KeyModifier.NONE);
-            int color = 0;
+            int color;
             if (this.enabled) {
                 if (this.hovered && !parent.getCategoryListExtended()) {
                     color = 0xFFAAAAAA;

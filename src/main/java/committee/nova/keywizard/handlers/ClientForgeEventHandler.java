@@ -1,6 +1,6 @@
 package committee.nova.keywizard.handlers;
 
-import committee.nova.keywizard.KeyWizardConfig;
+import committee.nova.keywizard.config.KeyWizardConfig;
 import committee.nova.keywizard.gui.GuiKeyWizard;
 import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

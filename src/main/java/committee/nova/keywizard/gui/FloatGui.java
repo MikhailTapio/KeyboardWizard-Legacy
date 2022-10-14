@@ -148,10 +148,10 @@ public class FloatGui {
         //float f1 = 0.00390625F; Unused??
         Tessellator tessellator = Tessellator.instance;
         tessellator.startDrawingQuads();
-        tessellator.addVertexWithUV((x + 0), (y + height), this.zLevel, ((float) (textureX + 0) * 0.00390625F), (float) (textureY + height) * 0.00390625F);
+        tessellator.addVertexWithUV((x + 0), (y + height), this.zLevel, ((float) (textureX) * 0.00390625F), (float) (textureY + height) * 0.00390625F);
         tessellator.addVertexWithUV((x + width), (y + height), this.zLevel, ((float) (textureX + width) * 0.00390625F), (float) (textureY + height) * 0.00390625F);
-        tessellator.addVertexWithUV((x + width), (y + 0), this.zLevel, ((float) (textureX + width) * 0.00390625F), (float) (textureY + 0) * 0.00390625F);
-        tessellator.addVertexWithUV((x + 0), (y + 0), this.zLevel, ((float) (textureX + 0) * 0.00390625F), (float) (textureY + 0) * 0.00390625F);
+        tessellator.addVertexWithUV((x + width), (y + 0), this.zLevel, ((float) (textureX + width) * 0.00390625F), (float) (textureY) * 0.00390625F);
+        tessellator.addVertexWithUV((x + 0), (y + 0), this.zLevel, ((float) (textureX) * 0.00390625F), (float) (textureY) * 0.00390625F);
         tessellator.draw();
     }
 
@@ -163,10 +163,10 @@ public class FloatGui {
         //float f1 = 0.00390625F; Unused??
         Tessellator tessellator = Tessellator.instance;
         tessellator.startDrawingQuads();
-        tessellator.addVertexWithUV(xCoord + 0.0F, (yCoord + (float) maxV), this.zLevel, ((float) (minU + 0) * 0.00390625F), ((float) (minV + maxV) * 0.00390625F));
+        tessellator.addVertexWithUV(xCoord + 0.0F, (yCoord + (float) maxV), this.zLevel, ((float) (minU) * 0.00390625F), ((float) (minV + maxV) * 0.00390625F));
         tessellator.addVertexWithUV((xCoord + (float) maxU), (yCoord + (float) maxV), this.zLevel, ((float) (minU + maxU) * 0.00390625F), ((float) (minV + maxV) * 0.00390625F));
-        tessellator.addVertexWithUV((xCoord + (float) maxU), (yCoord + 0.0F), this.zLevel, ((float) (minU + maxU) * 0.00390625F), ((float) (minV + 0) * 0.00390625F));
-        tessellator.addVertexWithUV((xCoord + 0.0F), (yCoord + 0.0F), this.zLevel, ((float) (minU + 0) * 0.00390625F), ((float) (minV + 0) * 0.00390625F));
+        tessellator.addVertexWithUV((xCoord + (float) maxU), (yCoord + 0.0F), this.zLevel, ((float) (minU + maxU) * 0.00390625F), ((float) (minV) * 0.00390625F));
+        tessellator.addVertexWithUV((xCoord + 0.0F), (yCoord + 0.0F), this.zLevel, ((float) (minU) * 0.00390625F), ((float) (minV) * 0.00390625F));
         tessellator.draw();
     }
 
@@ -176,10 +176,10 @@ public class FloatGui {
     public void drawTexturedModalRect(int xCoord, int yCoord, TextureAtlasSprite textureSprite, int widthIn, int heightIn) {
         Tessellator tessellator = Tessellator.instance;
         tessellator.startDrawingQuads();
-        tessellator.addVertexWithUV(xCoord + 0, yCoord + heightIn, this.zLevel, textureSprite.getMinU(), textureSprite.getMaxV());
+        tessellator.addVertexWithUV(xCoord, yCoord + heightIn, this.zLevel, textureSprite.getMinU(), textureSprite.getMaxV());
         tessellator.addVertexWithUV(xCoord + widthIn, yCoord + heightIn, this.zLevel, textureSprite.getMaxU(), textureSprite.getMaxV());
-        tessellator.addVertexWithUV(xCoord + widthIn, yCoord + 0, this.zLevel, textureSprite.getMaxU(), textureSprite.getMinV());
-        tessellator.addVertexWithUV(xCoord + 0, yCoord + 0, this.zLevel, textureSprite.getMinU(), textureSprite.getMinV());
+        tessellator.addVertexWithUV(xCoord + widthIn, yCoord, this.zLevel, textureSprite.getMaxU(), textureSprite.getMinV());
+        tessellator.addVertexWithUV(xCoord, yCoord, this.zLevel, textureSprite.getMinU(), textureSprite.getMinV());
         tessellator.draw();
     }
 

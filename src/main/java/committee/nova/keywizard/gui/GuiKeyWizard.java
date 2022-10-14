@@ -1,6 +1,6 @@
 package committee.nova.keywizard.gui;
 
-import committee.nova.keywizard.KeyWizardConfig;
+import committee.nova.keywizard.config.KeyWizardConfig;
 import committee.nova.keywizard.util.KeybindUtils;
 import committee.nova.keywizard.util.KeyboardFactory;
 import committee.nova.keywizard.util.KeyboardLayout;
@@ -54,7 +54,7 @@ public class GuiKeyWizard extends GuiScreen {
 
     private final GuiScreen parentScreen;
 
-    private KeyboardLayout[] pages = {KeyWizardConfig.layout, KeyboardLayout.NUMPAD, KeyboardLayout.AUXILIARY};
+    private final KeyboardLayout[] pages = {KeyWizardConfig.layout, KeyboardLayout.NUMPAD, KeyboardLayout.AUXILIARY};
     private int pageNum = 0;
     private int mouse = 0;
     private int maxMouse = KeyWizardConfig.getMaxMouseButtons() - 1;
@@ -250,10 +250,7 @@ public class GuiKeyWizard extends GuiScreen {
             }
 
             if (button == this.buttonDone) {
-                if (this.parentScreen != null)
-                    this.mc.displayGuiScreen(this.parentScreen);
-                else
-                    this.mc.displayGuiScreen(null);
+                this.mc.displayGuiScreen(this.parentScreen);
             }
 
             if (button == this.buttonActiveModifier) {

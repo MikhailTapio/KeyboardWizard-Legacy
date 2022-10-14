@@ -1,4 +1,4 @@
-package committee.nova.keywizard;
+package committee.nova.keywizard.config;
 
 import committee.nova.keywizard.util.KeyboardLayout;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;

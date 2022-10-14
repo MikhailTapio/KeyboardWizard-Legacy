@@ -12,7 +12,7 @@ import java.util.Objects;
 
 public class GuiBindingList extends GuiScrollingList {
 
-    private GuiKeyWizard parent;
+    private final GuiKeyWizard parent;
     private KeyBinding[] bindings;
 
     private String searchText;
@@ -59,7 +59,7 @@ public class GuiBindingList extends GuiScrollingList {
         fontRender.drawStringWithShadow(I18n.format(currentBinding.getKeyDescription()), this.left + 3, slotTop, 0xFFFFFF);
 
         fontRender.drawStringWithShadow("(" + I18n.format(currentBinding.getKeyCategory()) + ")", this.left + 3, slotTop + fontRender.FONT_HEIGHT + 2, 0x444444);
-        int color = 0;
+        int color;
         final IKeyBinding mixined = (IKeyBinding) currentBinding;
         if (currentBinding.getKeyCode() == 0 || KeybindUtils.getNumConficts(currentBinding) > 0) {
             color = 0x993333;
@@ -68,8 +68,6 @@ public class GuiBindingList extends GuiScrollingList {
         } else {
             color = 0x999999;
         }
-        //int len = (I18n.format("gui.key")+": ").length() * 5;
-        //fontRender.drawStringWithShadow(I18n.format("gui.key")+": ", this.left + 3 , slotTop + fontRender.FONT_HEIGHT * 2 + 3, 0x999999);
         fontRender.drawStringWithShadow(mixined.getDisplayName(), this.left + 3, slotTop + fontRender.FONT_HEIGHT * 2 + 3, color);
     }
 
@@ -118,7 +116,7 @@ public class GuiBindingList extends GuiScrollingList {
     }
 
     private KeyBinding[] filterBindingsByName(KeyBinding[] bindings, String[] words) {
-        KeyBinding[] filtered = {};
+        KeyBinding[] filtered;
         filtered = Arrays.stream(bindings).filter(binding -> {
             boolean flag = true;
             for (String w : words) {
@@ -130,7 +128,7 @@ public class GuiBindingList extends GuiScrollingList {
     }
 
     private KeyBinding[] filterBindingsByKey(KeyBinding[] bindings, String keyName) {
-        KeyBinding[] filtered = {};
+        KeyBinding[] filtered;
         filtered = Arrays.stream(bindings).filter(binding -> ((IKeyBinding) binding).getDisplayName().toLowerCase().contains(keyName.toLowerCase())).toArray(KeyBinding[]::new);
         return filtered;
     }
