@@ -65,15 +65,12 @@ tasks.withType(Jar::class) {
 
 val remapJar by tasks.named<net.fabricmc.loom.task.RemapJarTask>("remapJar") {
     archiveBaseName.set("KeyboardWizard-Forge-1.8.9")
-    archiveClassifier.set("all")
-    if (!project.hasProperty("nomixin")) {
-        from(tasks.shadowJar)
-        input.set(tasks.shadowJar.get().archiveFile)
-    }
+    from(tasks.shadowJar)
+    input.set(tasks.shadowJar.get().archiveFile)
 }
 
 tasks.shadowJar {
-    archiveClassifier.set("all-dev")
+    archiveClassifier.set("dev")
     configurations = listOf(shadowImpl)
     doLast {
         configurations.forEach {
