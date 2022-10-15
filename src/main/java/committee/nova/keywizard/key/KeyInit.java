@@ -1,0 +1,15 @@
+package committee.nova.keywizard.key;
+
+import committee.nova.keywizard.KeyWizard;
+import net.minecraft.client.resources.I18n;
+import net.minecraft.client.settings.KeyBinding;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
+import org.lwjgl.input.Keyboard;
+
+public class KeyInit {
+    public static final KeyBinding keyOpenKeyWizard = new KeyBinding(I18n.format(KeyWizard.MODID + ".keybind.openKeyboardWizard"), Keyboard.KEY_F8, "key.categories.misc");
+
+    public static void init() {
+        ClientRegistry.registerKeyBinding(keyOpenKeyWizard);
+    }
+}

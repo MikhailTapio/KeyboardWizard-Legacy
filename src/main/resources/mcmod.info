@@ -1,0 +1,19 @@
+[
+  {
+    "modid": "keywizard",
+    "name": "Keyboard Wizard",
+    "description": "Keyboard Wizard for legacy versions",
+    "version": "${version}",
+    "mcversion": "1.8.9",
+    "url": "https://github.com/Nova-Committee/ModernKeyBinding/",
+    "updateUrl": "",
+    "authorList": [
+      "MrNerdy42",
+      "Tapio"
+    ],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]

@@ -1,0 +1,15 @@
+language.name=Chinese(Simplified)
+language.region=CN
+language.code=zh_CN
+categories.all=所有按键绑定
+categories.conflicts=冲突
+categories.unbound=解绑
+gui.openKeyWiz=按键精灵
+gui.done=完成
+gui.resetBinding=重置按键绑定
+gui.clearBinding=清除按键绑定
+gui.activeModifier=按键修饰符
+gui.bindingCategories=按键绑定分类
+gui.page=键盘页面
+gui.mouse=鼠标
+keywizard.keybind.openKeyboardWizard=打开按键精灵
